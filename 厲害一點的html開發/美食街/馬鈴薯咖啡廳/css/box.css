@@ -1,0 +1,16 @@
+.box_red {
+    width: 100px;
+    height: 100px;
+    background-color: #ff0000;
+}
+.box_red:hover {
+    background-color: #ff5e00;
+}
+.box_green{
+    width: 100px;
+    height: 100px;
+    background-color: #00ff00;
+}
+.box_green:hover {
+    background-color: #00ff5e;
+}

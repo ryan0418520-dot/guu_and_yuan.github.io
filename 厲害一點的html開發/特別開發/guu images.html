@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>你點了菇!</title>
+
+<style>
+body {
+  background: #111;
+  color: white;
+  font-family: Arial;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>你好!</h1>
+<h2>這裡是菇和<span style="color: orangered;">花園鰻</span>的網站!</h2>
+<p>下方為<span style="color: #00ff00;">全地圖</span></p>
+<hr>
+<a href="food.html">
+  <button>前往菇的<span style="color: #ff0000;">食物導覽</span></button>
+</a>
+<a href="guu_lab.html">
+  <button>前往超級菇菇<span style="color: #00ff00;">實</span><span style="color: #0059ff;">驗</span><span style="color: #c300ff;">室</span></button>
+</a><br>
+<input type="text" id="輸入名字"><br>
+<input type="password" placeholder="輸入密碼"><br>
+<button onclick="show()">註冊</button><br>
+
+<p id="result"></p>
+
+<script>
+function show() {
+  let value = document.getElementById("輸入名字").value;
+  document.getElementById("result").innerText =
+    "歡迎 " + value;
+}
+</script>
+</body>
+</html>
