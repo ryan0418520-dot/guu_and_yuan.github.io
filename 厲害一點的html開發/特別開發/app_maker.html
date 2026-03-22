@@ -14,5 +14,12 @@
     <script>
     </script>
     <input type="range" id="guu" min="0" max="100" step="10" value="50">
-    
+    <span id="yuan">50</span>
+    <script>
+        const slider = document.getElementById("guu")
+const valueDisplay = document.getElementById("yuan")
+
+// 即時顯示滑條數值
+guu.oninput = () => valueDisplay.textContent = guu.yuan
+</script>
 </body>
