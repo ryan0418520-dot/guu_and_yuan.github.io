@@ -11,15 +11,16 @@
     <input  type="checkbox">
     <label for="date1">輸入生日</label>
     <input type="date" id="date1"><br>
-    <script>
-    </script>
-    <input type="range" id="guu" min="0" max="100" step="10" value="50">
-    <span id="yuan">50</span>
-    <script>
-        const slider = document.getElementById("guu")
-const valueDisplay = document.getElementById("yuan")
+
+<input type="range" id="slider" min="0" max="100" step="10" value="50">
+<span id="value">50</span>
+
+<script>
+const slider = document.getElementById("slider")
+const valueDisplay = document.getElementById("value")
 
 // 即時顯示滑條數值
-guu.oninput = () => valueDisplay.textContent = guu.yuan
+slider.oninput = () => valueDisplay.textContent = slider.value
 </script>
+
 </body>
