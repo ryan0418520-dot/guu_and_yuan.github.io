@@ -74,7 +74,44 @@ button {
 
 <body>
     <audio src="audio/guu and backroom.mp3" controls></audio>
-  <kbd>p</kbd>
-  <p>上面的文字會是鍵盤的樣式嗎?~~</p>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>最簡子母畫面</title>
+</head>
+<body>
+
+    <button id="btn">直接顯示 guu 子母畫面</button>
+
+    <script>
+        document.getElementById('btn').addEventListener('click', async () => {
+            // 檢查瀏覽器支援度
+            if (!('documentPictureInPicture' in window)) {
+                alert('瀏覽器不支援，請使用新版 Chrome/Edge。');
+                return;
+            }
+
+            // 開啟懸浮視窗
+            const pipWindow = await window.documentPictureInPicture.requestWindow({
+                width: 250,
+                height: 150
+            });
+
+            // 直接將內容塞入懸浮視窗
+            pipWindow.document.body.innerHTML = `
+                <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #202124; color: #4285f4; font-size: 48px; font-weight: bold; margin: 0; font-family: sans-serif;">
+                    guu
+                </div>
+            `;
+            
+            // 清除懸浮視窗預設的 body 邊距
+            pipWindow.document.body.style.margin = '0';
+        });
+    </script>
+
+</body>
+</html>
+
 </body>
 </html>
