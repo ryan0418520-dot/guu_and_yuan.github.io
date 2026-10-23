@@ -7,6 +7,7 @@
 <body>
   <h1>歡迎來到超級菇菇實驗室！</h1>
   <h2>這裡是作者菇練習搓css和啃js的地方<s>我會更新</s></h2>
+  <p>一看我已經6個月沒更了，挫一下</p>
   <hr>
   <label id="selectguu" >選擇?生物</label>
   <select id="guuSelect">
@@ -17,6 +18,8 @@
     <option value="5">粉碎蘋果菇球</option>
     <option value="6">麻糬菇球</option>
   </select>
+  <button onclick="alert=('學習js的路還很長遠')">看感人留言，榴槤也可以</button>
+
   <hr>
   <style>
     button {
@@ -28,6 +31,7 @@
     }
     button:hover {
       cursor: pointer;
+      color: orange;
     }
   </style>
   <button onclick="alert('蚵仔麵線')">
@@ -46,14 +50,6 @@ input {
   border: none;
 }
 
-button {
-  padding: 8px 15px;
-  background: orangered;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
 #comments {
   margin-top: 20px;
@@ -66,52 +62,6 @@ button {
   margin-bottom: 10px;
 }
 </style>
-<audio href="audio/guu and the backroom.mp3">
-=======
-
-
 </head>
-
-<body>
-    <audio src="audio/guu and backroom.mp3" controls></audio>
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <title>最簡子母畫面</title>
-</head>
-<body>
-
-    <button id="btn">直接顯示 guu 子母畫面</button>
-
-    <script>
-        document.getElementById('btn').addEventListener('click', async () => {
-            // 檢查瀏覽器支援度
-            if (!('documentPictureInPicture' in window)) {
-                alert('瀏覽器不支援，請使用新版 Chrome/Edge。');
-                return;
-            }
-
-            // 開啟懸浮視窗
-            const pipWindow = await window.documentPictureInPicture.requestWindow({
-                width: 250,
-                height: 150
-            });
-
-            // 直接將內容塞入懸浮視窗
-            pipWindow.document.body.innerHTML = `
-                <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #202124; color: #4285f4; font-size: 48px; font-weight: bold; margin: 0; font-family: sans-serif;">
-                    guu
-                </div>
-            `;
-            
-            // 清除懸浮視窗預設的 body 邊距
-            pipWindow.document.body.style.margin = '0';
-        });
-    </script>
-
-</body>
-</html>
-
 </body>
 </html>
