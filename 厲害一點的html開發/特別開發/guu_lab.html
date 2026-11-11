@@ -31,12 +31,28 @@
     <dd>下雪級</dd>
     <dt>頭好痛啊(下冰雹級</dt>
   </dl>
+  <div class="card">
+    <h3>新聞</h3>
+  </div>
   <hr>
   <style>
+    .card{
+      flex: 1;
+      border-radius: 10px;
+      border-color: aquamarine;
+      background-color: gold;
+      color: blue;
+      transition: 0.5s;
+    }
+    .card:hover{
+      color: darkblue;
+      border-color: aqua;
+      background-color: goldenrod;
+    }
     dd, dt{
       background-color: purple;
       color: yellow;
-      transition: 1.5s;
+      transition: 0.5s;
       max-width: 200px;
     }
     dd:hover, dt:hover{
